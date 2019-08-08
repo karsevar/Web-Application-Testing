@@ -1,9 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as rtl from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect'
 import App from './App';
+import { isTSAnyKeyword } from '@babel/types';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('App', () => {
+  it('span mounts to dom', () => {
+    const appDiv = rtl.render(<App/>);
+    const span = appDiv.queryByText(/hello project/i)
+    console.log(span);
+  })
+})
