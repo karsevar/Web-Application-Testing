@@ -5,6 +5,8 @@ export const handleHit = () => {
 
 export const handleStrike = (strike, callBackStrike, callBackBall) => {
     if(strike === 3) {
+        callBackStrike(0)
+        callBackBall(0) 
         return [callBackStrike(0), callBackBall(0)];
     }
     strike += 1
@@ -13,6 +15,8 @@ export const handleStrike = (strike, callBackStrike, callBackBall) => {
 
 export const handleBall = (ball, callBackBall, callBackStrike) => {
     if (ball === 4) {
+        callBackStrike(0);
+        callBackBall(0); 
         return [callBackBall(0), callBackStrike(0)];
     }
     const newBall = ball + 1
