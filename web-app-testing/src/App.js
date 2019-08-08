@@ -18,6 +18,7 @@ function App() {
         ball={ball}
       />
       <Dashboard 
+        handleFoul={handleFoul}
         handleStrike={handleStrike} 
         handleBall={handleBall} 
         setStrike={setStrike} 

@@ -28,6 +28,7 @@ export const handleBall = (ball, callBackBall, callBackStrike) => {
 export const handleFoul = (strike, callBackStrike, callBackBall) => {
     if (strike === 1) {
         strike += 2
+    } else if (strike === 3) {
         callBackStrike(0);
         callBackBall(0);
     } else if(strike === 0) {
