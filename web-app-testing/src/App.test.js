@@ -8,6 +8,6 @@ describe('App', () => {
   it('span mounts to dom', () => {
     const appDiv = rtl.render(<App/>);
     const span = appDiv.queryByText(/hello project/i)
-    console.log(span);
+    //console.log(span);
   })
 })
