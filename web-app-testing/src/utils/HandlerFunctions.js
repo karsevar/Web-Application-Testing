@@ -25,6 +25,13 @@ export const handleBall = (ball, callBackBall, callBackStrike) => {
     return callBackBall(newBall);
 };
 
-export const handleFoul = () => {
-
+export const handleFoul = (strike, callBackStrike, callBackBall) => {
+    if (strike === 1) {
+        strike += 2
+        callBackStrike(0);
+        callBackBall(0);
+    } else if(strike === 0) {
+        strike += 1;
+    }
+    return callBackStrike(strike);
 }

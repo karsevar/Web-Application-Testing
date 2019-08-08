@@ -15,13 +15,13 @@ describe('Display', () => {
     const ball = 0;
 
     const ballDisplay = render(<Display ball={ball}/>)
-    expect(ballDisplay.getByTestId('ball-display'));
+    expect(ballDisplay.getByTestId('ball-display')).toBeTruthy();
   });
 
   it('Should display Strike Count', () => {
       const strike=0;
 
       const strikeDisplay = render(<Display strike={strike} />)
-      expect(strikeDisplay.getByTestId('strike-display'))
+      expect(strikeDisplay.getByTestId('strike-display')).toBeTruthy();
   });
 })
