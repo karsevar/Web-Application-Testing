@@ -8,5 +8,6 @@ import '@testing-library/react/cleanup-after-each';
 describe('Dashboard', () => {
   it('renders without crashing', () => {
     render(<Dashboard />)
-  })
+  });
+  
 })

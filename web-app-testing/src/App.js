@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 import Display from './components/Display';
+import Dashboard from './components/Dashboard';
 
 import {handleStrike, handleBall, handleHit, handleFoul} from './utils/HandlerFunctions';
 import './App.css';
@@ -13,6 +14,10 @@ function App() {
   return (
     <div className="App">
       <Display 
+        strike={strike}  
+        ball={ball}
+      />
+      <Dashboard 
         handleStrike={handleStrike} 
         handleBall={handleBall} 
         setStrike={setStrike} 
