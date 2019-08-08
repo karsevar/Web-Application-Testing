@@ -1,6 +1,8 @@
 
-export const handleHit = () => {
-
+export const handleHit = (callBackStrike, callBackBall) => {
+    callBackStrike(0);
+    callBackBall(0);
+    return [callBackStrike(0), callBackBall(0)]
 };
 
 export const handleStrike = (strike, callBackStrike, callBackBall) => {

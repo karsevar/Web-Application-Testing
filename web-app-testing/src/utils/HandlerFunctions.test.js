@@ -18,10 +18,10 @@ describe('Testing utilities functions for click handlers', () => {
             expect(handleStrike(0, (value) => value)).toBe(1);
             // expect(handleStrike(3, (value) => value, (value) => value)).toBe([0,0]);
         });
-        it('Should reset handleBall and handleStrike hooks if maximum is reached', () => {
-            const ball = 3;
-            const strike = 3;
-            expect()
+        it('Should reset ball and strike hooks to zero if pressed', () => {
+            expect(handleHit((value) => value, (value) => value)).not.toBe(0);
+            expect(handleHit((value) => value, (value) => value)).not.toBe(null);
+            // expect(handleHit((value) => value, (value) => value)).toBe([0,0])
         })
     });
 })
