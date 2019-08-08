@@ -24,6 +24,7 @@ function App() {
         strike={strike} 
         setBall={setBall} 
         ball={ball}
+        handleHit={handleHit}
       />
     </div>
   );
